@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KFC</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+    header {
+        background-color: red;
+        color: white;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header nav a {
+        color: white;
+        margin: 0 15px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    .hero {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px;
+        background-color: #fff5f5;
+    }
+    .hero-section {
+        max-width: 50%;
+    }
+    .hero-section h1 {
+        color: red;
+        font-size: 48px;
+        margin: 0 0 20px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    .hero-section button {
+        color: white;
+        font-size: 20px;
+        font-family: 'Times New Roman', Times, serif;
+        background-color: red;
+        padding: 10px 20px;
+        border-radius: 12px;
+        border: none;
+        cursor: pointer;
+    }
+    .hero img {
+        width: 400px;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    .Products {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        margin: 40px;
+        padding: 20px;
+        background: #ffffff;
+    }
+    .product {
+        border: 1px solid #ddd;
+        border-radius: 15px;
+        padding: 20px;
+        text-align: center;
+        color: rgb(168, 0, 0);
+        box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+    }
+    .product img {
+        width: 200px;
+        height: auto;
+        margin-bottom: 10px;
+        border-radius: 8px;
+    }
+    .product button {
+        width: 120px;
+        height: 40px;
+        border: none;
+        border-radius: 20px;
+        color: white;
+        background-color: red;
+        font-weight: bold;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+    .about {
+        text-align: center;
+        color: rgb(185, 4, 4);
+        margin: 40px 20px;
+        padding: 20px;
+        background-color: #fff5f5;
+        border-radius: 10px;
+    }
+    .contact {
+        text-align: center;
+        margin: 40px 20px;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+    }
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        max-width: 400px;
+        margin: 0 auto;
+        gap: 15px;
+    }
+    .contact-form input, .contact-form textarea {
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    .contact-form button {
+        padding: 10px;
+        background-color: red;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    footer {
+        text-align: center;
+        padding: 20px;
+        background-color: red;
+        color: white;
+        margin-top: 40px;
+    }
+</style>
+</head>
+
+<body>
+<header>
+    <div><strong><i>KFC</i></strong></div>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Servings</a>
+        <a href="#">About Us</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-section">
+        <h1>Welcome to KFC!</h1>
+        <button>Order Now</button>
+    </div>
+    <img src="KFC/burger.jpg.jpeg" alt="Fast food">
+</section>
+
+<section class="Products">
+    <div class="product">
+        <img src="KFC/Doner Kebab Photos - Download Free High-Quality Pictures _ Freepik.jpeg" alt="Kebab">
+        <h3>Kebab</h3>
+        <p>$23</p>
+        <button>Order Now</button>
+    </div>
+
+    <div class="product">
+        <img src="KFC/nuggets.jpeg" alt="Nuggets">
+        <h3>Nuggets</h3>
+        <p>$25</p>
+        <button>Order Now</button>
+    </div>
+
+    <div class="product">
+        <img src="KFC/AI generated Delicious pepperoni pizza with melted cheese.jpeg" alt="Pizza">
+        <h3>Pizza</h3>
+        <p>$15</p>
+        <button>Order Now</button>
+    </div>
+
+    <div class="product">
+        <img src="KFC/create an appetizing visual of expertly seasoned waffle fries seasoned waffle fries fast.jpeg" alt="Seasoned Waffles">
+        <h3>Seasoned Waffles</h3>
+        <p>$15</p>
+        <button>Order Now</button>
+    </div>
+
+    <div class="product">
+        <img src="KFC/Nuestras marcas _ Flavor Cup.jpeg" alt="Mascas">
+        <h3>Mascas</h3>
+        <p>$10</p>
+        <button>Order Now</button>
+    </div>
+
+    <div class="product">
+        <img src="KFC/CRISPY FRENCH FRIES ON A PLATE ISOLATED IN A WHITE BACKGROUND _ Premium AI-generated image.jpeg" alt="French Fries">
+        <h3>French Fries</h3>
+        <p>$10</p>
+        <button>Order Now</button>
+    </div>
+</section>
+
+<section class="about">
+    <h2>About Us</h2>
+    <p>At KFC, we bring you elated servings to your hunger! Fresh, crispy, and irresistible — every time.</p>
+</section>
+
+<section class="contact">
+    <h2>Contact Us</h2>
+    <form class="contact-form">
+        <input type="text" name="Username" placeholder="Enter your name" required>
+        <input type="email" name="email" placeholder="Enter your email" required>
+        <textarea name="message" rows="4" placeholder="Your message"></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<footer>
+    © 2025 KFC. All rights reserved.
+</footer>
+
+</body>
+</html>
