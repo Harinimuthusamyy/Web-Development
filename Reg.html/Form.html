@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Form Validation</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+body {
+   background-image: url("Form images/wade-meng-LgCj9qcrfhI-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins';
+    color: rgb(243, 243, 243);
+    height: 100vh;
+}
+
+.glassbox {
+    background: rgba(197, 196, 196, 0.219);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 25px;
+    padding: 40px;
+    color: white;
+    width: 300px;
+}
+
+h2 {
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: 500;
+    color: white;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    font-family: 'Poppins';
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background: #ff6600;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Poppins', bold;
+}
+
+button:hover {
+    background: #fd0a0a;
+}
+
+.error {
+    color: #ffb3b3;
+    font-size: 13px;
+}
+</style>
+</head>
+
+<body>
+<div class="glassbox">
+    <h2>Register Here</h2>
+    <form id="form">
+        <label for="name">Username</label>
+        <input type="text" id="name" placeholder="Enter your Name">
+        <div id="nameError" class="error"></div>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter your Email">
+        <div id="emailError" class="error"></div>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter your Password">
+        <div id="passwordError" class="error"></div>
+
+        <button type="submit">Register now</button>
+    </form>
+</div>
+
+<script>
+document.getElementById("form").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    document.getElementById("nameError").textContent = "";
+    document.getElementById("emailError").textContent = "";
+    document.getElementById("passwordError").textContent = "";
+
+    let valid = true;
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value;
+
+    if (name === "") {
+        document.getElementById("nameError").textContent = "Name is required.";
+        valid = false;
+    }
+
+    const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    if (email === "") {
+        document.getElementById("emailError").textContent = "Email is required.";
+        valid = false;
+    } else if (!emailPattern.test(email)) {
+        document.getElementById("emailError").textContent = "Invalid email.";
+        valid = false;
+    }
+
+    if (password.length < 6) {
+        document.getElementById("passwordError").textContent = "Min 6 characters.";
+        valid = false;
+    }
+
+    if (valid) {
+        window.location.href = "Page2.html";  
+    }
+});
+</script>
+</body>
+</html>
